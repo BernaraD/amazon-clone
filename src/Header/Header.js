@@ -20,7 +20,7 @@ function Header() {
 
     return (
         <div className="header">
-            <Link to="/">
+            <Link to="/" className="link__style">
                 <img className="header__logo"
                      src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon-logo"
                 />
@@ -35,7 +35,7 @@ function Header() {
 
 
             <div className="header__nav">
-                <Link to={!user && "/login"}>
+                <Link to={!user && "/login"} className="link__style">
                     <div onClick={handleAuthentication}
                          className="header__option">
                         <span className="header__optionLineOne">Hello {!user ? 'Guest' : user.email}</span>
@@ -43,7 +43,7 @@ function Header() {
                     </div>
                 </Link>
 
-                <Link to={'/orders'}>
+                <Link to={'/orders'} className="link__style">
                     <div className="header__option">
                          <span className="header__optionLineOne">
                        Returns
@@ -63,7 +63,7 @@ function Header() {
                    </span>
                 </div>
 
-                <Link to="/checkout">
+                <Link to="/checkout" className="link__style">
                     <div className="header__optionBasket">
                         <ShoppingCartIcon/>
                         <span className="header__optionLineTwo header__basketCount">

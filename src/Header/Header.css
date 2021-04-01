@@ -8,6 +8,10 @@
     z-index: 100;
 }
 
+.link__style {
+    text-decoration: none;
+}
+
 .header__logo {
     width: 100px;
     object-fit: contain;
@@ -54,6 +58,7 @@
 .header__optionLineTwo {
     font-size: 13px;
     font-weight: 800;
+
 }
 
 .header__optionBasket {
