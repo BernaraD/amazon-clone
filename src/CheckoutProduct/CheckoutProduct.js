@@ -7,7 +7,7 @@ function Checkout(props) {
 
     const [{basket}, dispatch] = useStateValue();
 
-    const {id, image, title, price, rating} = props;
+    const {id, image, title, price, rating, hideButton} = props;
 
     const removeFromBasket = () => {
         //remove the item from the cart
@@ -37,7 +37,11 @@ function Checkout(props) {
                             <p>⭐</p>
                         ))}
                 </div>
-                <button onClick={removeFromBasket}>Remove from cart</button>
+
+                {!hideButton && (
+                    <button onClick={removeFromBasket}>Remove from cart</button>
+                )}
+
             </div>
         </div>
     )
