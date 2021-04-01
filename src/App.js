@@ -10,6 +10,7 @@ import {useStateValue} from "./StateProvider/StateProvider";
 import Payment from "./Payment/Payment";
 import {loadStripe} from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js'
+import Orders from "./Orders/Orders";
 
 
 
@@ -47,6 +48,12 @@ function App() {
             <div className="app">
 
                 <Switch>
+                    {/*Orders*/}
+
+                    <Route path="/orders">
+                        <Header/>
+                        <Orders/>
+                    </Route>
 
                     {/*Login link*/}
                     <Route path="/login">
